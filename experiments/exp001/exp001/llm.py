@@ -96,12 +96,17 @@ class OpenAIResponsesModel:
             raise RuntimeError(f'Falha da API HTTP {e.code}: confira modelo, chave e compatibilidade de formato.') from None
         except urllib.error.URLError as e:
             raise RuntimeError('Falha de rede ao consultar a API. Não houve resposta do modelo.') from None
+        if data.get('status')!='completed':
+            raise RuntimeError('A resposta da API não foi concluída; não utilizar saída incompleta como decisão.')
         payload=[]
         for entry in data.get('output',[]):
             if entry.get('type')=='message':
                 payload.extend(x.get('text','') for x in entry.get('content',[]) if x.get('type')=='output_text')
         if not payload: raise RuntimeError('API não retornou texto estruturado utilizável')
-        obj=json.loads(''.join(payload))
+        try:
+            obj=json.loads(''.join(payload))
+        except json.JSONDecodeError:
+            raise RuntimeError('A API retornou texto não interpretável como JSON estruturado.') from None
         usage=data.get('usage') or {}
         return obj,{'calls':1,'input_tokens':usage.get('input_tokens'),
                     'output_tokens':usage.get('output_tokens'),'latency_seconds':round(time.monotonic()-t0,3),

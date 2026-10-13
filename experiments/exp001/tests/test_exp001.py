@@ -1,11 +1,14 @@
 import json
 import tempfile
 import unittest
+import io
+import os
+from unittest.mock import patch
 from pathlib import Path
 from types import SimpleNamespace
 from exp001.core import load_cases, eligible,ranked, score, validate_response
 from exp001.evaluation import load_private_key,evaluate
-from exp001.llm import MockModel
+from exp001.llm import MockModel, OpenAIResponsesModel, PROPOSAL_SCHEMA
 from exp001.cli import run
 BASE=Path(__file__).resolve().parents[1]
 
@@ -58,6 +61,61 @@ class ExperimentTests(unittest.TestCase):
             reference={'best_ids':[o['id'] for o in ranked(c) if abs(score(c,o)-best)<1e-8]}
             self.assertEqual(evaluate(c,final,reference)['eligible_choice'],True)
         self.assertEqual(proposals['C']['recommended_id'],'C')
+    def test_api_plan_without_credentials(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            args=SimpleNamespace(public='',private='',mode='openai',model='modelo_exemplo',phase='calibration',
+                 limit=1,repeats=1,seed=20261013,output=str(Path(tmp)/'resultado'),conditions='ABC',
+                 max_api_calls=5,dry_run=True)
+            plan=run(args)
+            self.assertEqual(plan['api_calls_planned'],5)
+            self.assertEqual(plan['responses_planned'],3)
+            self.assertFalse(Path(args.output).exists())
+
+    def test_api_limit_prevents_network_and_file_creation(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            args=SimpleNamespace(public='',private='',mode='openai',model='modelo_exemplo',phase='calibration',
+                 limit=2,repeats=1,seed=20261013,output=str(Path(tmp)/'resultado'),conditions='ABC',
+                 max_api_calls=5,dry_run=False)
+            with self.assertRaisesRegex(ValueError,'exige 10 chamadas'):
+                run(args)
+            self.assertFalse(Path(args.output).exists())
+
+    def test_existing_results_never_overwritten(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            target=Path(tmp)/'run'; target.mkdir()
+            (target/'sentinela.txt').write_text('proteger')
+            args=SimpleNamespace(public='',private='',mode='mock',model='',phase='calibration',
+                 limit=1,repeats=1,seed=20261013,output=str(target),conditions='A')
+            with self.assertRaises(FileExistsError):run(args)
+            self.assertEqual((target/'sentinela.txt').read_text(),'proteger')
+
+    def test_api_request_contract_mocked_no_network(self):
+        response={'status':'completed','id':'resp_test','output':[{'type':'message',
+            'content':[{'type':'output_text','text':json.dumps({'recommended_id':'A'})}]}],
+            'usage':{'input_tokens':100,'output_tokens':50}}
+        captured=[]
+        def fake_open(request,timeout=120):
+            captured.append(json.loads(request.data.decode('utf8')))
+            return io.BytesIO(json.dumps(response).encode('utf8'))
+        with patch.dict(os.environ,{'OPENAI_API_KEY':'CHAVE_SIMULADA'},clear=False):
+            client=OpenAIResponsesModel('modelo_de_teste')
+            with patch('urllib.request.urlopen',side_effect=fake_open):
+                result,meta=client._query('proposta',PROPOSAL_SCHEMA,'instrucoes',{'case':'sintetico'})
+        self.assertEqual(result['recommended_id'],'A')
+        self.assertEqual(meta['input_tokens'],100)
+        self.assertFalse(captured[0]['store'])
+        self.assertEqual(captured[0]['text']['format']['type'],'json_schema')
+        self.assertEqual(captured[0]['max_output_tokens'],2500)
+
+    def test_api_rejects_incomplete_response(self):
+        reply={'status':'incomplete','output':[{'type':'message',
+            'content':[{'type':'output_text','text':'{"recommended_id":"A"}'}]}]}
+        with patch.dict(os.environ,{'OPENAI_API_KEY':'CHAVE_SIMULADA'},clear=False):
+            client=OpenAIResponsesModel('modelo_de_teste')
+            with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(reply).encode('utf8'))):
+                with self.assertRaisesRegex(RuntimeError,'não foi concluída'):
+                    client._query('proposta',PROPOSAL_SCHEMA,'instrucoes',{'case':'sintetico'})
+
     def test_invalid_model_option_blocked(self):
         c=next(c for c in self.cases if c['id']=='CAL-01')
         val,_=MockModel().propose(c,'A')

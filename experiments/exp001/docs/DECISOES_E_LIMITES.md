@@ -29,3 +29,13 @@ O código e os arquivos de dados têm versões, o manifesto registra SHA-256 e a
 - Simulador: **testável**.
 - API OpenAI: **adaptador implementado, não testado com conexão real**.
 - Memória persistente, reversibilidade relacional, gêmeo digital, avaliação adversarial independente, cultura da relação: **linhas de pesquisa**, não funcionalidades demonstradas pela bancada.
+
+## ADR-006 — Limites explícitos de chamadas e preservação de resultados
+
+**Decisão (v0.1.1):** antes de qualquer chamada de API, a CLI calcula quantas etapas externas seriam executadas. O limite inicial é de 5 chamadas por rodada, adequado para um cenário A/B/C. `--dry-run` não requer credenciais nem escreve arquivos. Diretórios de saída não vazios são bloqueados para evitar mistura de execuções.
+
+**Limite:** teto de chamadas e de tokens de saída por requisição não equivale a teto monetário. Modelo, tarifas, tokens de entrada e eventual raciocínio interno exigem avaliação adicional. Não há garantia de idempotência de cobrança se a API processar uma chamada e a rede falhar antes da resposta.
+
+## ADR-007 — Aceitar somente respostas completas da API
+
+**Decisão (v0.1.1):** respostas com status diferente de `completed`, sem conteúdo estruturado ou com JSON inválido devem falhar explicitamente. Testes de contrato usam transporte HTTP simulado, sem credenciais nem chamadas externas; não substituem a calibração real.

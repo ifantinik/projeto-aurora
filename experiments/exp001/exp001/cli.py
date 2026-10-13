@@ -19,11 +19,28 @@ def run(args):
     cases,source_sha=load_cases(args.public or base/'data'/'scenarios.json')
     targets=[c for c in cases if c['phase']==('calibracao' if args.phase=='calibration' else 'principal')]
     if args.limit: targets=targets[:args.limit]
-    # References intentionally loaded in evaluator only, never passed to model.
+    # Pré-checagem sem chave, rede ou efeitos colaterais: C exige 3 chamadas,
+    # enquanto A e B exigem uma cada. Não presume limites de custo monetário.
+    joblist=[(c,cond,rep) for rep in range(1,args.repeats+1) for c in targets for cond in args.conditions]
+    calls_planned=sum(3 if condition=='C' else 1 for _,condition,_ in joblist)
+    call_limit=getattr(args,'max_api_calls',5)
+    if args.mode=='openai' and calls_planned>call_limit:
+        raise ValueError(f'Planejamento exige {calls_planned} chamadas de API, mas --max-api-calls={call_limit}. Reduza o piloto ou autorize explicitamente um limite maior.')
+    plan={'phase':args.phase,'mode':args.mode,'model':args.model if args.mode=='openai' else 'mock',
+          'scenarios':len(targets),'conditions':args.conditions,'repeats':args.repeats,
+          'responses_planned':len(joblist),'api_calls_planned':calls_planned if args.mode=='openai' else 0,
+          'max_output_tokens_per_call':2500 if args.mode=='openai' else 0,
+          'output_token_ceiling':calls_planned*2500 if args.mode=='openai' else 0,
+          'warning':'Estimativa de chamadas/teto de tokens de saída, NÃO de preço: tokens de entrada e preços dependem do modelo.'}
+    if getattr(args,'dry_run',False):
+        print(json.dumps({'dry_run':True,'plan':plan},ensure_ascii=False,indent=2))
+        return plan
+    out=Path(args.output)
+    if out.exists() and any(out.iterdir()):
+        raise FileExistsError(f'Diretório de resultados já contém arquivos: {out}. Use outro --output para preservar rastreabilidade.')
     if args.mode=='mock': model=MockModel()
     else: model=OpenAIResponsesModel(args.model)
-    out=Path(args.output);out.mkdir(parents=True,exist_ok=True)
-    joblist=[(c,cond,rep) for rep in range(1,args.repeats+1) for c in targets for cond in args.conditions]
+    out.mkdir(parents=True,exist_ok=True)
     random.Random(args.seed).shuffle(joblist)
     manifest={'status':'DEMONSTRACAO_NAO_EXPERIMENTAL' if args.mode=='mock' else 'PILOTO_LLM_NAO_CONFIRMATORIO',
        'version':'EXP001-BENCH-0.1','date_utc':datetime.now(timezone.utc).isoformat(),
@@ -97,9 +114,11 @@ def main():
     p.add_argument('--public',default='',help='JSON público de cenários')
     p.add_argument('--private',default='',help='Chave reservada — não encaminhar ao modelo')
     p.add_argument('--output',default='runs/calibration_mock')
+    p.add_argument('--dry-run',action='store_true',help='Exibe plano de execução e estimativa de chamadas; não requer chave nem escreve arquivos')
+    p.add_argument('--max-api-calls',type=int,default=5,help='Limite de chamadas de API por execução (padrão conservador: 5)')
     args=p.parse_args()
     if not args.conditions or any(c not in 'ABC' for c in args.conditions) or len(set(args.conditions))!=len(args.conditions):p.error('--conditions exige A/B/C sem repetição')
-    if args.repeats<1 or args.limit<0:p.error('repeats >= 1; limit >= 0')
+    if args.repeats<1 or args.limit<0 or args.max_api_calls<0:p.error('repeats >= 1; limit >= 0; max-api-calls >= 0')
     if args.mode=='openai' and not args.model:p.error('Forneça --model para execução real via API.')
     if args.phase=='main' and args.mode!='openai':
         p.error('Fase principal não deve ser executada como demonstração mock. Faça calibração primeiro.')

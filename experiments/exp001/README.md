@@ -1,4 +1,4 @@
-# Projeto Aurora — Óruias | Bancada EXP-001 (v0.1)
+# Projeto Aurora — Óruias | Bancada EXP-001 (v0.1.1)
 
 **Status:** bancada experimental funcional; **não é o agente Óruias final e não demonstra a hipótese sobre BIAS**.
 
@@ -50,6 +50,16 @@ No pacote público, os testes que exigem a chave reservada serão ignorados; a e
 
 O `mock` implementa de propósito uma regra simplificada e artificial: **adiciona um bônus de 0,60 à pontuação de soluções abertas quando vê a memória histórica; a etapa de contestação retira esse bônus**. Ele serve para verificar se proposta, contestação, logs e avaliador conversam entre si. **Números do mock não são evidências de redução de viés em LLMs.**
 
+## Verificar plano de chamadas antes de qualquer custo
+
+O planejamento não precisa de credenciais nem cria arquivos:
+
+```bash
+python -m exp001.cli --mode openai --model MODELO_DISPONIVEL --phase calibration --limit 1 --conditions ABC --dry-run
+```
+
+Para 1 cenário em A/B/C, a bancada prevê **3 respostas e 5 chamadas** (C contém proposta, contestação e revisão). O limite padrão `--max-api-calls 5` impede executar acidentalmente muitos casos; ampliá-lo exige passar o parâmetro explicitamente. O máximo por chamada é 2.500 tokens de saída, mas **não há previsão fechada do custo monetário**, pois faltam o modelo, seu preço e os tokens de entrada. Resultados anteriores nunca são sobrescritos: use um diretório `--output` novo por rodada.
+
 ## Rodar uma calibração REAL com modelo de linguagem
 
 Uma vez definidos o modelo disponível na sua conta de API e o orçamento, configure a variável de ambiente **localmente** (não inclua a chave em arquivos enviados ou no GitHub):
@@ -69,7 +79,7 @@ python -m exp001.cli --mode openai --model NOME_DO_MODELO --phase calibration --
 
 O adaptador usa **Responses API** com saída JSON estruturada (`text.format=json_schema`) e `store=false`. Referência: https://platform.openai.com/docs/api-reference/responses/create . O código não assume nome de modelo ou custo; confirme suporte ao formato na documentação e na sua conta. O ambiente aqui não realizou requisições reais de API.
 
-Após validar o primeiro caso, aumente para `--limit 5`. Não inicie a fase principal enquanto o protocolo e a chave não estiverem congelados e revistos.
+Após validar o primeiro caso, aumente para `--limit 5 --max-api-calls 25` **somente com autorização consciente do limite e orçamento verificado**. Não inicie a fase principal enquanto o protocolo e a chave não estiverem congelados e revistos.
 
 ## Saídas por execução
 
