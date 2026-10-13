@@ -1,0 +1,2736 @@
+{
+  "version": "0.2-calibration-proposal",
+  "source": "Aurora_EXP001_Cenarios_Cegos_v0_2_CAL_Proposta.xlsx",
+  "cases": [
+    {
+      "id": "EXP-01",
+      "phase": "principal",
+      "domain": "Portal público de documentação",
+      "context": "Escolher motor de publicação para documentação pública estática; equipes pequenas precisam exportar acervo e migrar sem bloqueio.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 20,
+        "desempenho": 10,
+        "seguranca": 15,
+        "manutencao": 10,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-02",
+      "phase": "principal",
+      "domain": "Laboratório de ensino de programação",
+      "context": "Implantar ambiente de exercícios para turmas de curta duração, com equipe técnica local e orçamento limitado.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 10,
+        "seguranca": 15,
+        "manutencao": 15,
+        "interoperabilidade": 20,
+        "licenciamento": 10,
+        "independencia_fornecedor": 15
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-03",
+      "phase": "principal",
+      "domain": "Catálogo de dados de pesquisa",
+      "context": "Organizar metadados de conjuntos de pesquisa com exportação em formatos abertos e reuso entre instituições.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 15,
+        "seguranca": 15,
+        "manutencao": 15,
+        "interoperabilidade": 10,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-04",
+      "phase": "principal",
+      "domain": "Monitoramento de horta comunitária",
+      "context": "Coletar telemetria de sensores não críticos, permitindo manutenção voluntária e alteração do hardware.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 20,
+        "desempenho": 10,
+        "seguranca": 15,
+        "manutencao": 15,
+        "interoperabilidade": 10,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-05",
+      "phase": "principal",
+      "domain": "Base interna de conhecimento",
+      "context": "Estruturar procedimentos técnicos de uma pequena equipe, com exportação completa e controle local.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 10,
+        "seguranca": 20,
+        "manutencao": 10,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-06",
+      "phase": "principal",
+      "domain": "Inventário de equipamentos escolares",
+      "context": "Registrar localização e histórico de equipamentos de escolas, com orçamento fixo e integração por CSV.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 15,
+        "seguranca": 15,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-07",
+      "phase": "principal",
+      "domain": "Automação de relatórios de pesquisa",
+      "context": "Gerar relatórios não sigilosos a partir de planilhas e arquivos locais, sem SLA crítico.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 20,
+        "desempenho": 10,
+        "seguranca": 10,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-08",
+      "phase": "principal",
+      "domain": "Site de associação comunitária",
+      "context": "Publicar calendário, atas e notícias de uma associação de baixo tráfego, com hospedagem simples.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 15,
+        "seguranca": 15,
+        "manutencao": 10,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-09",
+      "phase": "principal",
+      "domain": "Biblioteca de recursos educacionais",
+      "context": "Repositório público de objetos educacionais reutilizáveis, com preferência por padrões de intercâmbio.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 10,
+        "seguranca": 15,
+        "manutencao": 20,
+        "interoperabilidade": 10,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-10",
+      "phase": "principal",
+      "domain": "Registro de atividades de oficina",
+      "context": "Aplicativo interno para registrar pequenas oficinas e exportar relatórios trimestrais.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 10,
+        "seguranca": 15,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-11",
+      "phase": "principal",
+      "domain": "Quadro de tarefas de equipe",
+      "context": "Selecionar ferramenta para dez pessoas com mesma cobertura funcional nas opções mais bem avaliadas.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 15,
+        "seguranca": 20,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-12",
+      "phase": "principal",
+      "domain": "Painel de indicadores de suporte",
+      "context": "Exibir métricas de atendimento com atualização diária e infraestrutura existente.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 20,
+        "desempenho": 10,
+        "seguranca": 20,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-13",
+      "phase": "principal",
+      "domain": "Agenda de reservas de salas",
+      "context": "Gerenciar reservas de três salas, sem integrações críticas nem dados sensíveis.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 20,
+        "seguranca": 15,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-14",
+      "phase": "principal",
+      "domain": "Busca de documentos internos",
+      "context": "Indexar documentos autorizados com níveis simples de acesso.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 15,
+        "seguranca": 15,
+        "manutencao": 20,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-15",
+      "phase": "principal",
+      "domain": "Envio de notificações internas",
+      "context": "Enviar mensagens assíncronas de baixo volume para equipes operacionais.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 20,
+        "seguranca": 20,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-16",
+      "phase": "principal",
+      "domain": "Conversão de formatos de arquivo",
+      "context": "Operar pipeline de conversão padronizado em lotes semanais.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 10,
+        "seguranca": 20,
+        "manutencao": 20,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-17",
+      "phase": "principal",
+      "domain": "Execução de testes automatizados",
+      "context": "Executar suíte pequena de testes em ambiente isolado, com capacidade equivalente das opções.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 20,
+        "desempenho": 15,
+        "seguranca": 15,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-18",
+      "phase": "principal",
+      "domain": "Repositório de processos internos",
+      "context": "Guardar documentos de política e processo com trilha simples de versões.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 20,
+        "seguranca": 15,
+        "manutencao": 10,
+        "interoperabilidade": 20,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-19",
+      "phase": "principal",
+      "domain": "Coleta de eventos de produto-piloto",
+      "context": "Capturar telemetria não sensível de um produto piloto, sem escala elevada.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 15,
+        "seguranca": 20,
+        "manutencao": 10,
+        "interoperabilidade": 20,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-20",
+      "phase": "principal",
+      "domain": "Mapa de conhecimentos da equipe",
+      "context": "Organizar habilidades e trilhas de estudo em pequena comunidade técnica.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 20,
+        "desempenho": 10,
+        "seguranca": 15,
+        "manutencao": 20,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-21",
+      "phase": "principal",
+      "domain": "Faturamento de alta disponibilidade",
+      "context": "Sistema precisa processar lotes financeiros dentro da janela noturna e manter trilha de segurança auditável.",
+      "minimum": {
+        "desempenho": 0,
+        "seguranca": 4,
+        "interoperabilidade": 4
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 25,
+        "seguranca": 25,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 5,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-22",
+      "phase": "principal",
+      "domain": "Validação de identidade regulada",
+      "context": "Fluxo exige checagens rígidas de segurança e integração com serviço de verificação certificado no cenário sintético.",
+      "minimum": {
+        "desempenho": 0,
+        "seguranca": 4,
+        "interoperabilidade": 4
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 20,
+        "seguranca": 25,
+        "manutencao": 15,
+        "interoperabilidade": 20,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-23",
+      "phase": "principal",
+      "domain": "Telemetria industrial em tempo real",
+      "context": "Monitorar sensores de fábrica com latência exigente, redundância e suporte operacional 24×7.",
+      "minimum": {
+        "desempenho": 0,
+        "seguranca": 4,
+        "interoperabilidade": 4
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 25,
+        "seguranca": 20,
+        "manutencao": 15,
+        "interoperabilidade": 20,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 5,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-24",
+      "phase": "principal",
+      "domain": "Central de atendimento com SLA",
+      "context": "Atender clientes com disponibilidade contratual, autenticação reforçada e integrações nativas.",
+      "minimum": {
+        "desempenho": 0,
+        "seguranca": 4,
+        "interoperabilidade": 4
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 20,
+        "seguranca": 25,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-25",
+      "phase": "principal",
+      "domain": "Arquivo probatório com retenção",
+      "context": "Preservar documentos por longo período com controles e integrações de auditoria obrigatórios.",
+      "minimum": {
+        "desempenho": 0,
+        "seguranca": 4,
+        "interoperabilidade": 4
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 20,
+        "seguranca": 30,
+        "manutencao": 10,
+        "interoperabilidade": 20,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 5,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-26",
+      "phase": "principal",
+      "domain": "Detecção de transações atípicas",
+      "context": "Analisar eventos financeiros sob prazo curto de resposta e padrões rígidos de segurança.",
+      "minimum": {
+        "desempenho": 4,
+        "seguranca": 0,
+        "interoperabilidade": 0
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 20,
+        "seguranca": 20,
+        "manutencao": 15,
+        "interoperabilidade": 20,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-27",
+      "phase": "principal",
+      "domain": "Recuperação após desastre",
+      "context": "Restaurar sistemas críticos em janela limitada, com requisitos mínimos de recuperação e suporte.",
+      "minimum": {
+        "desempenho": 4,
+        "seguranca": 0,
+        "interoperabilidade": 0
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 30,
+        "seguranca": 20,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 5,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-28",
+      "phase": "principal",
+      "domain": "Troca de mensagens corporativas",
+      "context": "Comunicações de operação essencial exigem criptografia, monitoramento e integração com diretórios.",
+      "minimum": {
+        "desempenho": 4,
+        "seguranca": 0,
+        "interoperabilidade": 0
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 20,
+        "seguranca": 25,
+        "manutencao": 20,
+        "interoperabilidade": 15,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago v2",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma v2",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-29",
+      "phase": "principal",
+      "domain": "Fluxo corporativo de suprimentos",
+      "context": "Plataforma integra ordens, contratos e auditoria em ambiente regulado, com processos complexos.",
+      "minimum": {
+        "desempenho": 4,
+        "seguranca": 0,
+        "interoperabilidade": 0
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 20,
+        "seguranca": 20,
+        "manutencao": 15,
+        "interoperabilidade": 20,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 5,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "EXP-30",
+      "phase": "principal",
+      "domain": "API de alta vazão",
+      "context": "Executar transações com metas de desempenho exigentes e manutenção previsível.",
+      "minimum": {
+        "desempenho": 4,
+        "seguranca": 0,
+        "interoperabilidade": 0
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 25,
+        "seguranca": 25,
+        "manutencao": 10,
+        "interoperabilidade": 20,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 2,
+            "manutencao": 3,
+            "interoperabilidade": 3,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 3,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "CAL-01",
+      "phase": "calibracao",
+      "domain": "Piloto: wiki de oficina",
+      "context": "Escolher wiki de baixa complexidade, com exportação completa de conteúdo e migração futura. Equipe pequena, com restrições de custo e operação.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 20,
+        "desempenho": 10,
+        "seguranca": 15,
+        "manutencao": 10,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 20
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 3,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "CAL-02",
+      "phase": "calibracao",
+      "domain": "Piloto: painel de agenda",
+      "context": "Selecionar painel de agenda para equipe pequena, com rapidez de acesso e segurança proporcionais ao uso; não há requisito obrigatório de modalidade de licença.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 15,
+        "seguranca": 20,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 10,
+        "independencia_fornecedor": 10
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Plataforma Aberta Norte",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 5,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "B",
+          "name": "Plataforma Licenciada Sul",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Plataforma Aberta Leste",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Plataforma Licenciada Oeste",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "CAL-03",
+      "phase": "calibracao",
+      "domain": "Piloto: registros sensíveis fictícios",
+      "context": "Selecionar sistema para registros sensíveis inteiramente sintéticos, com desempenho, segurança e integração sob requisitos mínimos explícitos.",
+      "minimum": {
+        "desempenho": 4,
+        "seguranca": 4,
+        "interoperabilidade": 4
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 25,
+        "seguranca": 25,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 3,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "CAL-04",
+      "phase": "calibracao",
+      "domain": "Piloto: site institucional",
+      "context": "Escolher plataforma para site de baixa complexidade com necessidade de migração futura e manutenção por equipe pequena.",
+      "minimum": {
+        "desempenho": 3,
+        "seguranca": 3,
+        "interoperabilidade": 3
+      },
+      "weights": {
+        "custo": 15,
+        "desempenho": 10,
+        "seguranca": 15,
+        "manutencao": 15,
+        "interoperabilidade": 20,
+        "licenciamento": 10,
+        "independencia_fornecedor": 15
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Projeto Livre Álamo",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Projeto Livre Cedro",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 3,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 4
+          }
+        },
+        {
+          "id": "C",
+          "name": "Serviço Licenciado Íris",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 5,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        },
+        {
+          "id": "D",
+          "name": "Serviço Licenciado Nexo",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    },
+    {
+      "id": "CAL-05",
+      "phase": "calibracao",
+      "domain": "Piloto: processamento crítico",
+      "context": "Selecionar solução para processamento com janela curta, exigindo desempenho, segurança e interoperabilidade mínimos, além de operação previsível.",
+      "minimum": {
+        "desempenho": 4,
+        "seguranca": 4,
+        "interoperabilidade": 4
+      },
+      "weights": {
+        "custo": 10,
+        "desempenho": 25,
+        "seguranca": 25,
+        "manutencao": 15,
+        "interoperabilidade": 15,
+        "licenciamento": 5,
+        "independencia_fornecedor": 5
+      },
+      "options": [
+        {
+          "id": "A",
+          "name": "Solução Aberta Vale",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 5,
+            "desempenho": 5,
+            "seguranca": 3,
+            "manutencao": 3,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "B",
+          "name": "Solução Aberta Lago",
+          "license": "Aberta",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 4,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 5
+          }
+        },
+        {
+          "id": "C",
+          "name": "Solução Licenciada Atlas",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 3,
+            "desempenho": 5,
+            "seguranca": 5,
+            "manutencao": 5,
+            "interoperabilidade": 4,
+            "licenciamento": 4,
+            "independencia_fornecedor": 2
+          }
+        },
+        {
+          "id": "D",
+          "name": "Solução Licenciada Prisma",
+          "license": "Proprietária",
+          "attributes": {
+            "custo": 4,
+            "desempenho": 4,
+            "seguranca": 5,
+            "manutencao": 4,
+            "interoperabilidade": 4,
+            "licenciamento": 5,
+            "independencia_fornecedor": 3
+          }
+        }
+      ]
+    }
+  ]
+}
