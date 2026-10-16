@@ -260,6 +260,14 @@ As referências poderão assumir diferentes estados:
 
 ---
 
+## Laboratório de aprendizagem
+
+O [Learning Lab](learning-lab/README.md) reúne exercícios da formação em Arquitetura de Soluções Digitais, com observações, limitações e decisões versionadas. É uma área de aprendizagem: seus registros **não validam hipóteses do núcleo do Projeto Aurora**.
+
+Primeiro registro: [LL-001 — CSR em React + Vite × SSR em Nuxt, 16/10/2026](learning-lab/frontend/csr-vs-ssr/README.md).
+
+---
+
 ## Autoria
 
 **Isis Fantini Carneiro Klein**
