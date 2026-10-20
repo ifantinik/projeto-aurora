@@ -18,15 +18,21 @@ A avaliação precisa distinguir pelo menos três níveis:
 
 Informação inventada, inferência sem sustentação e viés podem coexistir, mas não são a mesma falha. Também não basta separar formalmente o proponente e o avaliador: pessoas ou modelos diferentes podem trabalhar dentro do mesmo enquadramento e reproduzir o mesmo ponto cego. Uma revisão humana registrada é um evento verificável; sua qualidade exige exame próprio.
 
-**Hipótese experimental:** avaliadores com funções separadas, mas enquadramento comum, podem detectar menos falhas de premissa do que avaliadores instruídos a testar enquadramentos alternativos. Uma comparação deve medir detecção, falsas objeções, custo e tempo. Maior divergência não será tomada automaticamente como maior qualidade.
+### Hipótese do nó desmagnetizado
 
-**Pergunta arquitetural:** como um avaliador contesta não só a resposta, mas a pergunta e os critérios recebidos? A arquitetura deve tornar observáveis o encaminhamento da contestação, a autoridade para revisar critérios e as condições que suspendem a execução. Uma explicação gerada pelo modelo pode ser avaliada como justificação apresentada; ela não será tratada como relato fiel do processo interno do modelo.
+“Nó desmagnetizado” é a metáfora para um avaliador que recebe uma **base de raciocínio estabelecida independentemente da formulação da resposta** e verifica se a resposta corresponde a ela. O nó não reconstrói o problema nem tenta adivinhar o processo interno do modelo. Sua tarefa é examinar a sustentação da resposta segundo essa base.
+
+A base pode explicitar premissas admitidas, critérios, regras de inferência, evidências exigidas, limites de conclusão e condições de escalonamento. Ela precisa ter origem e versão registradas, bem como autoridade definida para sua revisão. O avaliador recebe a base, a questão, a resposta final e evidências consultáveis; na condição de avaliação isolada, não recebe a sequência de prompts, rascunhos, justificativas persuasivas ou avaliações prévias que conduziram à resposta. Esse isolamento é uma proposta experimental, não uma garantia de neutralidade.
+
+O avaliador pode apontar: conclusão incompatível com a base; premissa necessária ausente; evidência insuficiente; aplicação indevida de critério; ou conclusão que excede o alcance autorizado. Se a própria base tiver um viés, a conformidade da resposta com ela não demonstra qualidade da decisão. A contestação da base exige uma função de governança distinta, capaz de suspender a execução e encaminhar a revisão a quem possui autoridade para alterá-la.
+
+**Hipótese experimental:** um avaliador isolado do processo de formulação da resposta pode detectar mais falhas de sustentação do que um avaliador exposto a esse processo, usando a mesma base de raciocínio. Comparar detecção, falsas objeções, custo e tempo. Maior divergência não será tomada automaticamente como maior qualidade. Uma explicação gerada pelo modelo pode ser avaliada como justificação apresentada; ela não será tratada como relato fiel de seu processo interno.
 
 ### Cenário a especificar
 
-Uma decisão organizacional recebe dados factualmente corretos e uma recomendação coerente, mas parte de uma premissa contestável. Comparar: (A) revisão apenas factual; (B) revisão da justificação sob os critérios originais; (C) revisão com autorização explícita para questionar enquadramento e critérios. Construir a chave de avaliação antes de expor os casos aos avaliadores. Registrar acertos, objeções falsas, dependências compartilhadas e decisões de escalonamento.
+Construir casos com dados factualmente corretos e respostas que variem entre: sustentação válida, salto inferencial, premissa ausente e aplicação indevida de um critério. Definir e versionar a base e a chave de avaliação antes de gerar as respostas. Comparar: (A) avaliador com acesso à base e à resposta final; (B) avaliador com os mesmos elementos mais o histórico de formulação. Manter casos e base iguais entre condições e registrar detecção, falsas objeções, custo, tempo e divergências. Em um teste separado, inserir um viés na própria base para verificar se o mecanismo de governança o detecta; isso não é função da simples checagem de correspondência.
 
-Esse desenho ainda precisa de controle de dificuldade, critérios independentes e exemplos que permitam refutar a hipótese. Ele não constitui experimento realizado.
+Esse desenho ainda precisa de controles para diferenças entre avaliadores e de exemplos que possam refutar a hipótese. Ele não constitui experimento realizado.
 
 ## 2. Transposição cultural da escrita para a IA
 
@@ -45,7 +51,7 @@ O vínculo entre as duas linhas é a necessidade de preservar rastreabilidade e 
 ## Próximos registros
 
 1. Delimitar conceitos de viés, falha factual, erro de inferência e enquadramento, buscando antecedentes bibliográficos.
-2. Especificar casos controlados e chave de avaliação para a hipótese sobre falhas de premissa.
+2. Especificar a base de raciocínio, casos controlados e chave de avaliação para testar a correspondência da resposta sem expor o avaliador ao processo de formulação.
 3. Reunir exemplos comparáveis da produção textual em diferentes meios, sem pressupor uma narrativa histórica linear.
 4. Registrar quando uma evidência altera, limita ou refuta cada hipótese.
 5. Decidir separadamente se cada linha cabe no recorte do TCC ou permanece na investigação pessoal do Aurora.
