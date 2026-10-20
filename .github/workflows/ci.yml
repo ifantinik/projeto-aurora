@@ -1,0 +1,59 @@
+name: Aurora — verificações offline
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  offline:
+    name: Demonstração e planejamento sem API
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verificar sintaxe Python
+        run: python -m compileall -q research/demos/no-desmagnetizado
+      - name: Executar demonstração determinística
+        run: python research/demos/no-desmagnetizado/no_desmagnetizado.py
+      - name: Preparar piloto sem chamadas externas
+        run: python research/demos/no-desmagnetizado/piloto_llm.py --out "${{ runner.temp }}/aurora-plano"
+      - name: Verificar isolamento das condições e integridade do plano
+        env:
+          PLAN_PATH: ${{ runner.temp }}/aurora-plano/plano.json
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          plan = json.loads(Path(os.environ["PLAN_PATH"]).read_text())
+          assert plan["status"] == "PLANEJADO"
+          assert plan["chamadas"] == len(plan["jobs"]) == 18
+          groups = {}
+          for job in plan["jobs"]:
+              payload = json.loads(job["input"])
+              assert "esperado" not in payload
+              assert set(payload) == {
+                  "A": {"base", "fatos", "resposta"},
+                  "B": {"base", "fatos", "resposta", "contexto_formulador_sintetico"},
+                  "C": {"base", "fatos", "resposta", "contexto_neutro"},
+              }[job["condicao"]]
+              key = (job["caso"], job["repeticao"])
+              conditions = groups.setdefault(key, {})
+              assert job["condicao"] not in conditions
+              conditions[job["condicao"]] = {
+                  name: payload[name] for name in ("base", "fatos", "resposta")
+              }
+          assert len(groups) == 6
+          for conditions in groups.values():
+              assert set(conditions) == set("ABC")
+              assert conditions["A"] == conditions["B"] == conditions["C"]
+          print("Plano validado: 6 casos, 3 condições, zero chamadas à API.")
+          PY

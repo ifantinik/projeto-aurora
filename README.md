@@ -260,6 +260,14 @@ As referências poderão assumir diferentes estados:
 
 ---
 
+## Investigação de avaliação independente
+
+A [área de pesquisa](research/README.md) reúne o [registro de hipóteses](research/HIPOTESES.md), a demonstração do nó desmagnetizado e o protocolo do piloto ND-001.
+
+**Estado em 20/10/2026:** demonstração determinística executada; piloto LLM preparado e validado offline. A execução com API aguarda disponibilidade de orçamento, sem prazo definido ([impedimento #3](https://github.com/ifantinik/projeto-aurora/issues/3)). Nenhuma chamada foi realizada e não há resultado empírico de LLM. A retomada ocorrerá quando a responsável informar disponibilidade financeira.
+
+---
+
 ## Laboratório de aprendizagem
 
 O [Learning Lab](learning-lab/README.md) reúne exercícios da formação em Arquitetura de Soluções Digitais, com observações, limitações e decisões versionadas. É uma área de aprendizagem: seus registros **não validam hipóteses do núcleo do Projeto Aurora**.
