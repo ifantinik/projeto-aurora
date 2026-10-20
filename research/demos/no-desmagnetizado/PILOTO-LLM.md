@@ -57,3 +57,10 @@ Comparar por caso e condição: falhas detectadas, falsas objeções a respostas
 O comportamento real do endpoint e dos modelos permanece não testado neste ambiente.
 
 Referência técnica: https://developers.openai.com/api/reference/python/resources/responses/methods/create
+
+
+## Estado e retomada — 20/10/2026
+
+**Execução com LLM bloqueada por indisponibilidade de orçamento para créditos da API.** Sem prazo definido; retomada quando a responsável informar disponibilidade financeira. Zero chamadas à API. A demonstração determinística e a validação offline não comprovam redução de viés em LLMs.
+
+Ver [registro de hipóteses](../../HIPOTESES.md), [índice de pesquisa](../../README.md) e [impedimento #3](https://github.com/ifantinik/projeto-aurora/issues/3).
