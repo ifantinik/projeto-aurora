@@ -60,3 +60,10 @@ Uma alteração relevante nos fatos — confirmar indisponibilidade — muda o r
 7. Testar separadamente a qualidade da própria base e o mecanismo autorizado para revisá-la.
 
 Esse protocolo é uma proposta; nenhuma comparação com LLM foi executada neste registro.
+
+
+## Estado e retomada — 20/10/2026
+
+**Execução com LLM bloqueada por indisponibilidade de orçamento para créditos da API.** Sem prazo definido; retomada quando a responsável informar disponibilidade financeira. Zero chamadas à API. A demonstração determinística e a validação offline não comprovam redução de viés em LLMs.
+
+Ver [registro de hipóteses](../../HIPOTESES.md), [índice de pesquisa](../../README.md) e [impedimento #3](https://github.com/ifantinik/projeto-aurora/issues/3).
